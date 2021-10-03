@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElizaIsSilly
 {
@@ -10,6 +6,8 @@ namespace ElizaIsSilly
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(Doctor.Intro());
+
         }
     }
 }
