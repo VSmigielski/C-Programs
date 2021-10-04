@@ -16,7 +16,7 @@ namespace ElizaIsSilly
             {
                 // Reads the input within console
                 userInput = Console.ReadLine();
-                string response = Doctor.response(userInput);
+                string response = Doctor.Response(userInput);
                 Console.WriteLine(response);
             }
             
