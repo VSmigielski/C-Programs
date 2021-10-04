@@ -1,0 +1,7 @@
+D:\C# Programs\BuiltInTypes\bin\Debug\BuiltInTypes.exe.config
+D:\C# Programs\BuiltInTypes\bin\Debug\BuiltInTypes.exe
+D:\C# Programs\BuiltInTypes\bin\Debug\BuiltInTypes.pdb
+D:\C# Programs\BuiltInTypes\obj\Debug\BuiltInTypes.csproj.AssemblyReference.cache
+D:\C# Programs\BuiltInTypes\obj\Debug\BuiltInTypes.csproj.CoreCompileInputs.cache
+D:\C# Programs\BuiltInTypes\obj\Debug\BuiltInTypes.exe
+D:\C# Programs\BuiltInTypes\obj\Debug\BuiltInTypes.pdb
