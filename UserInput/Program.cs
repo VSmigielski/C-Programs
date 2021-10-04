@@ -17,7 +17,10 @@ namespace UserInput
             Console.WriteLine("How old are you?");
             var age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(name + " is " + age + " years old.")
+            // Console.WriteLine(name + " is " + age + " years old.")
+            
+            // String interpolation
+            Console.WriteLine($"{name} is {age} years old.");
         }
     }
 }
