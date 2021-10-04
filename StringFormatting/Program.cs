@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+// https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting#format-string-component
 
 namespace StringFormatting
 {
@@ -29,6 +27,9 @@ namespace StringFormatting
             //Console.WriteLine($"{apples, -12} {appleQuantity, -8} {applePrice/100.0, 10:C}");
             //Console.WriteLine($"{oranges, -12} {orangeQuantity, -8} {orangePrice/100.0, 10:C}");
 
+            // " :F{number} " is precision
+            // Floating point numbers stored within the language only have so much precision
+            // This is why the last PI has 0 following up to the end of the format number
             Console.WriteLine($"PI is {Math.PI}");
 
             Console.WriteLine($"PI is {Math.PI:F3}");
