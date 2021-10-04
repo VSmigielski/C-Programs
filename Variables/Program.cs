@@ -19,7 +19,7 @@ namespace Variables
             var subtraction = randomNumber.Next(2, 10);
 
             // No assignment yet because it's not calculated
-            int answer ;
+            int answer = firstNumber + secondNumber - subtraction;
 
             // Store info within a variable rather than typing it multiple times
             string prompt = "Don't type in the answer, just press ENTER when ready";
