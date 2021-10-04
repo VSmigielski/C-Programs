@@ -1,0 +1,6 @@
+D:\C# Programs\StringFormatting\bin\Debug\StringFormatting.exe.config
+D:\C# Programs\StringFormatting\bin\Debug\StringFormatting.exe
+D:\C# Programs\StringFormatting\bin\Debug\StringFormatting.pdb
+D:\C# Programs\StringFormatting\obj\Debug\StringFormatting.csproj.CoreCompileInputs.cache
+D:\C# Programs\StringFormatting\obj\Debug\StringFormatting.exe
+D:\C# Programs\StringFormatting\obj\Debug\StringFormatting.pdb
