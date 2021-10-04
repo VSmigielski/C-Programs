@@ -1,0 +1,7 @@
+D:\C# Programs\Accuracy\bin\Debug\Accuracy.exe.config
+D:\C# Programs\Accuracy\bin\Debug\Accuracy.exe
+D:\C# Programs\Accuracy\bin\Debug\Accuracy.pdb
+D:\C# Programs\Accuracy\obj\Debug\Accuracy.csproj.AssemblyReference.cache
+D:\C# Programs\Accuracy\obj\Debug\Accuracy.csproj.CoreCompileInputs.cache
+D:\C# Programs\Accuracy\obj\Debug\Accuracy.exe
+D:\C# Programs\Accuracy\obj\Debug\Accuracy.pdb
