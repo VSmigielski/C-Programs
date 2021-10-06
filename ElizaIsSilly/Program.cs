@@ -14,10 +14,10 @@ namespace ElizaIsSilly
             Console.ResetColor();
 
             // Used to hold user input
-            var userInput = "";
+            string userInput;
 
             // If user input is not "quit", continue running the code
-            while (!userInput.Equals("quit", StringComparison.OrdinalIgnoreCase))
+            do
             {
                 // Reads the input within console
                 userInput = Console.ReadLine();
@@ -27,10 +27,7 @@ namespace ElizaIsSilly
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine(response);
                 Console.ResetColor();
-            }
-            
-
-
+            } while (!userInput.Equals("quit", StringComparison.OrdinalIgnoreCase));
         }
     }
 }
