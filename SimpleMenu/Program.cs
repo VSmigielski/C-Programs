@@ -28,12 +28,6 @@ namespace SimpleMenu
                 switch (userChoice)
                 {
                     case '1':
-                        Console.WriteLine("Making Cappuccino...");
-                        Console.WriteLine("Steam the milk");
-                        Console.WriteLine("Froth the milk");
-                        Console.WriteLine("Make espresso");
-                        Console.WriteLine("Add the milk to the espresso");
-                        break;
                     case '2':
                         Console.WriteLine("Making Latte...");
                         Console.WriteLine("Make espresso");
