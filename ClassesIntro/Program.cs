@@ -15,7 +15,7 @@ namespace ClassesIntro
             myCar.Brake(10);
 
             anotherCar.Accelerate(2);
-            anotherCar.Brake(-1);
+            anotherCar.Brake(5);
         }
     }
 
@@ -36,10 +36,29 @@ namespace ClassesIntro
             ShowSpeed();
         }
 
-        public void Brake(int amount)
+        public void Brake(int speedReduction)
         {
             // Subtracts 1 to current speed
-            speed -= amount;
+            speed -= speedReduction;
+
+            if (speed < 0)
+            {
+                speed = 0;
+            }
+
+            // Another way to ensure speed is not negative
+            /*if (speed < speedReduction)
+            {
+                speed = 0;
+            } else
+            {
+                speed -= speedReduction;
+            }*/
+
+            // Ternary way
+            /* speed = (speed < speedReduction) 
+             * ? 0 : speed - speedReduction;*/
+
             ShowSpeed();
         }
 
