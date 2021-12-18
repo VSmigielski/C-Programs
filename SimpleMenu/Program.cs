@@ -33,23 +33,35 @@ namespace SimpleMenu
                         Console.WriteLine("Make espresso");
                         Console.WriteLine("Steam the milk");
                         Console.WriteLine("Add milk to the espresso");
+                        // Breaks out of switch
                         break;
                     case '3':
                         Console.WriteLine("Making Americano...");
+                        // Breaks out of switch
                         break;
                     case '4':
                         Console.WriteLine("Making Mocha...");
+                        // Breaks out of switch
                         break;
                     case '5':
                         Console.WriteLine("Making Macchiatto...");
+                        // Breaks out of switch
                         break;
                     case '6':
                         Console.WriteLine("Making Espresso...");
+                        // Breaks out of switch
                         break;
                     default:
                         Console.WriteLine("Returning coins");
-                        break;
+                        // Skips to line 66, code on 63&64 will not be executed
+                        continue;
                 }
+
+                // This would break out of the do while loop
+                // break;
+
+                Console.WriteLine("Dispensing coffee");
+                Console.WriteLine("Have a nice day");
             
             } while (!userChoice.Equals('q'));
 
