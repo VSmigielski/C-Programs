@@ -12,9 +12,10 @@ namespace ClassesIntro
 
             myCar.Accelerate(5);
             myCar.Accelerate(30);
-            myCar.Brake();
+            myCar.Brake(10);
 
-            anotherCar.Brake();
+            anotherCar.Accelerate(2);
+            anotherCar.Brake(-1);
         }
     }
 
@@ -35,10 +36,10 @@ namespace ClassesIntro
             ShowSpeed();
         }
 
-        public void Brake()
+        public void Brake(int amount)
         {
             // Subtracts 1 to current speed
-            speed--;
+            speed -= amount;
             ShowSpeed();
         }
 
