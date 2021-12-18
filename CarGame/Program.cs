@@ -61,11 +61,7 @@ namespace CarGame
                     {
                         case Left:
                             // move left
-                            for (int i = 0; i < batmobile.Speed; i++)
-                            {
-                                carPosition--;
-                                DrawRoad(carPosition);
-                            }
+                            playing = Drive(batmobile.Speed, ref carPosition);
                             break;
                         case Straight:
                             for (int i = 0; i < batmobile.Speed; i++)
@@ -87,7 +83,7 @@ namespace CarGame
                             batmobile.Brake(accelerationFactor);
                             break;
                         case Info:
-                            batmobile.PrintSpeed();
+                            batmobile.ShowSpeed();
                             break;
                         case Quit:
                             playing = false;
@@ -95,6 +91,29 @@ namespace CarGame
                     }
                 }
             } while (playing);
+        }
+
+        static bool StillOnTrack(int position, String road)
+        {
+            return (position < road.Length) && road[position].Equals(' ');
+        }
+
+        static bool Drive(int speed, ref int position)
+        {
+            for (int i = 0; i < speed; i++)
+            {
+                position = position - 1;
+                if (StillOnTrack(position, Road))
+                {
+                    DrawRoad(position);
+                }
+                else
+                {
+                    Console.WriteLine("Oops! You've crashed! Game over.");
+                    return false;
+                }
+            }
+            return true;
         }
 
         static void DrawRoad(int carPosition)
@@ -125,12 +144,7 @@ namespace CarGame
             ShowSpeed();
         }
 
-        public void PrintSpeed()
-        {
-            ShowSpeed();
-        }
-
-        private void ShowSpeed()
+        public void ShowSpeed()
         {
             Console.WriteLine($"{name} is going {Speed * 10} miles per hour.");
         }
