@@ -1,0 +1,7 @@
+D:\C# Programs\CarGame\bin\Debug\CarGame.exe.config
+D:\C# Programs\CarGame\bin\Debug\CarGame.exe
+D:\C# Programs\CarGame\bin\Debug\CarGame.pdb
+D:\C# Programs\CarGame\obj\Debug\CarGame.csproj.AssemblyReference.cache
+D:\C# Programs\CarGame\obj\Debug\CarGame.csproj.CoreCompileInputs.cache
+D:\C# Programs\CarGame\obj\Debug\CarGame.exe
+D:\C# Programs\CarGame\obj\Debug\CarGame.pdb
