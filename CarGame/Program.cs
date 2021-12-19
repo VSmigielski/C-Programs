@@ -16,6 +16,11 @@ namespace CarGame
         private const char Info = 'i';
         private const char Quit = 'q';
 
+        // Directions
+        private const int DirectionLeft = -1;
+        private const int DirectionStraight = 0;
+        private const int DirectionRight = 1;
+
         static void Main(string[] args)
         {
             Console.Clear();
@@ -61,20 +66,13 @@ namespace CarGame
                     {
                         case Left:
                             // move left
-                            playing = Drive(batmobile.Speed, ref carPosition);
+                            playing = Drive(batmobile.Speed, ref carPosition, DirectionLeft);
                             break;
                         case Straight:
-                            for (int i = 0; i < batmobile.Speed; i++)
-                            {
-                                DrawRoad(carPosition);
-                            }
+                            playing = Drive(batmobile.Speed, ref carPosition, DirectionStraight);
                             break;
                         case Right:
-                            for (int i = 0; i < batmobile.Speed; i++)
-                            {
-                                carPosition++;
-                                DrawRoad(carPosition);
-                            }
+                            playing = Drive(batmobile.Speed, ref carPosition, DirectionRight);
                             break;
                         case Accelerate:
                             batmobile.Accelerate(accelerationFactor);
@@ -98,11 +96,11 @@ namespace CarGame
             return (position < road.Length) && road[position].Equals(' ');
         }
 
-        static bool Drive(int speed, ref int position)
+        static bool Drive(int speed, ref int position, int direction)
         {
             for (int i = 0; i < speed; i++)
             {
-                position = position - 1;
+                position = position + direction;
                 if (StillOnTrack(position, Road))
                 {
                     DrawRoad(position);
