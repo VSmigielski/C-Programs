@@ -26,9 +26,45 @@ namespace OperatorsContinued
             {
                 Console.WriteLine($"The next month after {month} is {month % 12 + 1}");
             }
-            
-        
 
+            int second = 31;
+            int minute = 1;
+
+            if ((minute < 59) && ((second + 1) > 59))
+            {
+                minute++;
+            }
+
+            int a = 12;
+            // If b is 0 then it gives an error
+            int b = 6;
+
+            /*if (b != 0)
+            {
+                int c = DivideTwoNumbers(a, b);
+
+                if (c == 2)
+                {
+                    Console.WriteLine("We've found a 2");
+                }
+            }*/
+
+            // Helps avoid null pointer exceptions
+            if (b != 0 && DivideTwoNumbers(a, b) == 2)
+            {
+                Console.WriteLine("We've found a 2");
+            }
+
+            if (b == 0 || DivideTwoNumbers(a, b) == 2)
+            {
+                Console.WriteLine("We've found a 2");
+            }
+
+        }
+
+        static int DivideTwoNumbers(int x, int y)
+        {
+            return x / y;
         }
     }
 }

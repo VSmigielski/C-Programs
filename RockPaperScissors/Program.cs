@@ -5,9 +5,9 @@ namespace RockPaperScissors
     class Program
     {
         // Convention for constants in C# -- PascalCase
-        private const int Rock = 0;
-        private const int Paper = 1;
-        private const int Scissors = 2;
+        private const int Rock = 0; // Beats Scissors (Scissors + 1) % 3 = 0
+        private const int Paper = 1; // Beats Rock (Rock + 1) % 3 = 1
+        private const int Scissors = 2; // Beats Paper (Paper + 1) % 3 = 2
 
         static void Main(string[] args)
         {
@@ -63,8 +63,9 @@ namespace RockPaperScissors
                 {
                     Console.WriteLine("It's a draw");
                 }
-                else if ((playerValue - 1 == computerValue)
-                    || (playerValue == Rock && computerValue == Scissors))
+                /*else if ((playerValue - 1 == computerValue)
+                    || (playerValue == Rock && computerValue == Scissors))*/
+                else if (playerValue == (computerValue + 1) % 3)
                 {
                     Console.WriteLine("Player wins");
                 }
