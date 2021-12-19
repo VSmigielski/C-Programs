@@ -1,0 +1,7 @@
+D:\C# Programs\AssignmentOperators\bin\Debug\AssignmentOperators.exe.config
+D:\C# Programs\AssignmentOperators\bin\Debug\AssignmentOperators.exe
+D:\C# Programs\AssignmentOperators\bin\Debug\AssignmentOperators.pdb
+D:\C# Programs\AssignmentOperators\obj\Debug\AssignmentOperators.csproj.AssemblyReference.cache
+D:\C# Programs\AssignmentOperators\obj\Debug\AssignmentOperators.csproj.CoreCompileInputs.cache
+D:\C# Programs\AssignmentOperators\obj\Debug\AssignmentOperators.exe
+D:\C# Programs\AssignmentOperators\obj\Debug\AssignmentOperators.pdb
