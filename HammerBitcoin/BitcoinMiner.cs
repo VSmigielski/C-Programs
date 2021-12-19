@@ -62,7 +62,8 @@ namespace HammerBitcoin
                 PrintSummary();
                 int computersToBuy = BuyComputers(computerPrice, computers, ref cash);
                 computers += computersToBuy;
-                SellComputers();
+                int computersToSell = SellComputers(computerPrice, computers, ref cash);
+                computers -= computersToSell;
                 PayEmployees();
                 MaintainComputers();
 
@@ -134,7 +135,7 @@ namespace HammerBitcoin
                 cost = computerPrice * computersToBuy;
             }
             cash = cash - cost;
-            /*numberOfComputers = numberOfComputers + computersToBuy;*/
+         
             Console.WriteLine($"{OGH}, you now have {numberOfComputers + computersToBuy} computers");
             Console.WriteLine($"and {cash} bitcoins of cash.");
             return computersToBuy;
@@ -156,7 +157,7 @@ namespace HammerBitcoin
         * 
         * Available cash will be increased by the value of the computers sold.
         */
-        private void SellComputers()
+        private int SellComputers(int computerPrice, int computers, ref int cash)
         {
             string question = "How many computers will you sell? ";
             int computersToSell = GetNumber(question);
@@ -167,9 +168,10 @@ namespace HammerBitcoin
                 computersToSell = GetNumber(question);
             }
             cash = cash + computerPrice * computersToSell;
-            computers = computers - computersToSell;
-            Console.WriteLine($"{OGH}, you now have {computers} computers");
+           
+            Console.WriteLine($"{OGH}, you now have {computers - computersToSell} computers");
             Console.WriteLine($"and {cash} bitcoins of cash.");
+            return computersToSell;
         }
 
         /**
