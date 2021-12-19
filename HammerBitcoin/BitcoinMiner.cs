@@ -136,7 +136,6 @@ namespace HammerBitcoin
                 cost = computerPrice * computersToBuy;
             }
             cash = cash - cost;
-         
             Console.WriteLine($"{OGH}, you now have {numberOfComputers + computersToBuy} computers");
             Console.WriteLine($"and {cash} bitcoins of cash.");
             return computersToBuy;
@@ -169,7 +168,6 @@ namespace HammerBitcoin
                 computersToSell = GetNumber(question);
             }
             cash = cash + computerPrice * computersToSell;
-           
             Console.WriteLine($"{OGH}, you now have {computers - computersToSell} computers");
             Console.WriteLine($"and {cash} bitcoins of cash.");
             return computersToSell;
@@ -190,7 +188,6 @@ namespace HammerBitcoin
                 Jest($"We have but {cash} bitcoins!");
                 cashPaid = GetNumber(question);
             }
-
             Console.WriteLine($"{OGH}, {cash - cashPaid} bitcoins remain.");
             return cashPaid;
         }
@@ -227,7 +224,7 @@ namespace HammerBitcoin
             }
             quantityMaintained = maintenanceAmount / 2;
             // Be nice to the player!  If they enter an odd number, give them the extra bitcoin back.
-            cash -= quantityMaintained * 2; 
+            cash -= quantityMaintained * 2;
             Console.WriteLine($"{OGH}, we now have {cash} bitcoins in storage.");
             return quantityMaintained;
         }
@@ -286,18 +283,9 @@ namespace HammerBitcoin
         */
         private int CountNewHires()
         {
-            int newEmployees = (starved > 0) 
-                ? 0 
+            int newEmployees = (starved > 0)
+                ? 0
                 : (20 * computers + cash) / (100 * employees) + 1;
-            /*if (starved > 0)
-            {
-                newEmployees = 0;
-            }
-            else
-            {
-                newEmployees = (20 * computers + cash) / (100 * employees) + 1;
-            }*/
-
             return newEmployees;
         }
 
@@ -413,7 +401,7 @@ namespace HammerBitcoin
             while (true)
             {
                 Console.Write(message);
-                string userInput = Console.ReadLine();
+                var userInput = Console.ReadLine();
                 try
                 {
                     return int.Parse(userInput);
@@ -438,7 +426,7 @@ namespace HammerBitcoin
             while (true)  // infinite loop.  return will exit the method, thus terminating the loop
             {
                 Console.Write($"{question} ");
-                answer = Console.ReadKey().KeyChar;
+                answer = Console.ReadKey(true).KeyChar;
                 answer = char.ToLower(answer);
                 if (answer.Equals('y'))
                     return true;
@@ -448,4 +436,3 @@ namespace HammerBitcoin
         }
     }
 }
-
